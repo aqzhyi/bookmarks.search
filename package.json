@@ -13,12 +13,14 @@
     "mocha": "^2.2.5"
   },
   "scripts": {
+    "predev": "npm i",
     "dev": "gulp clean && (gulp build & gulp dev)",
     "prebuild": "npm i",
     "build": "gulp clean && npm run install:dist && (gulp build)",
     "postbuild": "npm test",
     "install:dist": "cd dist/bg/ && npm i",
-    "test": "mocha"
+    "test": "mocha",
+    "zip": "rm foo.zip && zip -r foo.zip . --exclude './node_modules/**' './.git/**'"
   },
   "author": "Pleasurazy <pleasurazy@gmail.com>",
   "license": "MIT",

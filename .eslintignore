@@ -1,0 +1,6 @@
+icon
+dist/bg
+_locales
+logs
+*log
+node_modules

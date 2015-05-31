@@ -1,0 +1,40 @@
+{
+  "name": "Bookmark native searcher",
+  "version": "1.0.0",
+  "manifest_version": 2,
+  "description": "This extension was created with the awesome extensionizr.com",
+  "homepage_url": "http://extensionizr.com",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "default_locale": "en",
+  "content_scripts": [
+    {
+      "js": [
+        "./dist/bg/node_modules/jquery/dist/jquery.min.js",
+        "./dist/bg/index.js"
+      ],
+      "css": [
+        "./dist/bg/index.css"
+      ],
+      "matches": [
+        "http://*/*",
+        "https://*/*"
+      ]
+    }
+  ],
+  "background": {
+    "page": "dist/bg/background.html",
+    "persistent": true
+  },
+  "permissions": [
+    "tabs",
+    "activeTab",
+    "bookmarks",
+    "history",
+    "http://*/*",
+    "https://*/*"
+  ]
+}

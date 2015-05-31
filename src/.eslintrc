@@ -1,0 +1,12 @@
+{
+  "rules": {
+  },
+  "globals": {
+    "chrome": true
+  },
+  "env": {
+    "browser": true,
+    "node": false,
+    "es6": true
+  }
+}

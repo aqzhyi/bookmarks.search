@@ -1,4 +1,4 @@
-# Bookmarks Search [![Travis](https://img.shields.io/travis/Pleasurazy/bookmarks.search.svg)](https://github.com/Pleasurazy/bookmarks.search)
+# Bookmarks Search [![Travis](https://img.shields.io/travis/Pleasurazy/bookmarks.search.svg)](https://travis-ci.org/Pleasurazy/bookmarks.search)
 
 Bookmarks search, the google way. like [Evernote Web](http://i.imgur.com/IeaQO08.jpg).
 

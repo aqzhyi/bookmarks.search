@@ -48,11 +48,11 @@ function babelTask() {
 }
 
 function clearTask(done) {
-  let clean = [
+  var clean = [
     './dist/bg/*',
   ];
 
-  let keep = [
+  var keep = [
     './dist/bg/node_modules',
     './dist/bg/package.json',
     './dist/bg/.gitkeep',

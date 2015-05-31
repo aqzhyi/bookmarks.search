@@ -20,7 +20,7 @@
     "postbuild": "npm test",
     "install:dist": "cd dist/bg/ && npm i",
     "test": "mocha",
-    "zip": "rm foo.zip && zip -r foo.zip . --exclude './node_modules/**' './.git/**'"
+    "zip": "rm -f foo.zip && zip -r foo.zip . --exclude './node_modules/**' './.git/**'"
   },
   "author": "Pleasurazy <pleasurazy@gmail.com>",
   "license": "MIT",

@@ -6,7 +6,7 @@ Youtube.com, tw.yahoo.com, www.google.com, www.bing.com, github.com, etc, works!
 
 # Install
 
-WIP
+Google Chrome: https://chrome.google.com/webstore/detail/bookmark-native-searcher/oakdljgpfopdkhicnfbgbleaklilciai
 
 # Preview
 

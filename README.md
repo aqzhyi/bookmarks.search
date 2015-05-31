@@ -2,30 +2,41 @@
 
 Bookmarks search, the google way. like [Evernote Web](http://i.imgur.com/IeaQO08.jpg).
 
-# install
+Youtube.com, tw.yahoo.com, www.google.com, www.bing.com, github.com, etc, works!
+
+# Install
 
 WIP
 
-# preview
+# Preview
 
 Google Search Engine | Youtube search
 --- | ---
 ![](http://i.imgur.com/3vtk3V1.jpg) | ![](http://i.imgur.com/zKYnF3b.jpg)
 
-# development
+# Bevelopment
 
 ```shell
 $ npm run dev
 ```
 
-# build
+# Build
 
 ```shell
 $ npm run build
 ```
 
-# test
+# Test
 
 ```shell
 $ npm test
+```
+
+```
+query
+  ✓ query keywords (q|search_query|query|etc) should be work
+  ✓ query in the last param using hash sign
+  ✓ query between url params using hash sign
+  ✓ query between url params using http queryparams
+  ✓ query between url params using restful params
 ```

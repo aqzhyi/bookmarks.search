@@ -1,9 +1,9 @@
 {
-  "name": "Bookmark native searcher",
+  "name": "Bookmarks search",
   "version": "1.0.0",
   "manifest_version": 2,
-  "description": "This extension was created with the awesome extensionizr.com",
-  "homepage_url": "http://extensionizr.com",
+  "description": "Chrome extension for bookmarks search, the google way.",
+  "homepage_url": "https://github.com/Pleasurazy/bookmarks.search",
   "icons": {
     "16": "icons/icon16.png",
     "48": "icons/icon48.png",

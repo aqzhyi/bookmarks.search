@@ -8,11 +8,11 @@ function Listening(request, sender, callback)
 {
   let bookmarks = request.data || [];
 
-  if (request.event == 'pleasurazy-bookmark-native-searcher:queryBookmarksEnded') {
-    let resultElement = jQuery('.pleasurazy-bookmark-native-searcher');
+  if (request.event == 'pleasurazy-bookmark-search:queryBookmarksEnded') {
+    let resultElement = jQuery('.pleasurazy-bookmark-search');
 
     if (!resultElement.length) {
-      resultElement = jQuery('<ul>').addClass('pleasurazy-bookmark-native-searcher');
+      resultElement = jQuery('<ul>').addClass('pleasurazy-bookmark-search');
       resultElement.attr('draggable', true);
       jQuery('body').prepend(resultElement);
     }

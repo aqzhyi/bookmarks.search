@@ -2,10 +2,10 @@
 
 import jQuery from 'jquery';
 
-chrome.extension.onRequest.addListener(Listening);
+chrome.extension.onRequest.addListener(bookmarkSearcherListener);
 
-function Listening(request, sender, callback)
-{
+/////
+function bookmarkSearcherListener(request, sender, callback) {
   let bookmarks = request.data || [];
 
   if (request.event == 'pleasurazy-bookmark-search:queryBookmarksEnded') {

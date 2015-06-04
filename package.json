@@ -19,7 +19,7 @@
     "build": "gulp clean && npm run install:dist && gulp build",
     "postbuild": "npm test",
     "install:dist": "cd dist/bg/ && npm i",
-    "test": "mocha -w",
+    "test": "mocha",
     "zip": "rm -f foo.zip && zip -r foo.zip . --exclude './node_modules/**' './.git/**'"
   },
   "author": "Pleasurazy <pleasurazy@gmail.com>",

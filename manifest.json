@@ -1,6 +1,6 @@
 {
   "name": "Bookmarks search",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "manifest_version": 2,
   "description": "Chrome extension for bookmarks search, the google way.",
   "homepage_url": "https://github.com/Pleasurazy/bookmarks.search",

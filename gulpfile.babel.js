@@ -1,9 +1,10 @@
-'use strict'
+import gulp from 'gulp'
+import loadplugins from 'gulp-load-plugins'
+import del from 'del'
+import RunSeq from 'run-sequence'
 
-var gulp = require('gulp')
-var plugins = require('gulp-load-plugins')()
-var mergeStream = require('merge-stream')
-var del = require('del')
+let runseq = RunSeq.use(gulp)
+let plugins = loadplugins()
 
 gulp.task('dev', devTask)
 gulp.task('jade', jadeTask)
@@ -12,12 +13,12 @@ gulp.task('babel', babelTask)
 gulp.task('build', buildTask)
 gulp.task('clean', clearTask)
 
-function buildTask() {
-  var s1 = jadeTask()
-  var s2 = babelTask()
-  var s3 = lessTask()
-
-  return mergeStream(s1, s2, s3)
+function buildTask(done) {
+  runseq(
+    'clean',
+    ['jade', 'babel', 'less'],
+    done
+  )
 }
 
 function devTask() {
@@ -48,11 +49,11 @@ function babelTask() {
 }
 
 function clearTask(done) {
-  var clean = [
+  let clean = [
     './dist/bg/*',
   ]
 
-  var keep = [
+  let keep = [
     './dist/bg/node_modules',
     './dist/bg/package.json',
     './dist/bg/.gitkeep',

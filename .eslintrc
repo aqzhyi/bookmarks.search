@@ -1,4 +1,8 @@
 {
+  "ecmaFeatures": {
+    "modules": true,
+    "jsx": false
+  },
   "rules": {
     // ASI
     "semi": [2, "never"],

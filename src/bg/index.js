@@ -1,23 +1,23 @@
-'use strict';
+'use strict'
 
-import jQuery from 'jquery';
+import jQuery from 'jquery'
 
-chrome.extension.onRequest.addListener(bookmarkSearcherListener);
+chrome.extension.onRequest.addListener(bookmarkSearcherListener)
 
 /////
 function bookmarkSearcherListener(request, sender, callback) {
-  let bookmarks = request.data || [];
+  let bookmarks = request.data || []
 
   if (request.event == 'pleasurazy-bookmark-search:queryBookmarksEnded') {
-    let resultElement = jQuery('.pleasurazy-bookmark-search');
+    let resultElement = jQuery('.pleasurazy-bookmark-search')
 
     if (!resultElement.length) {
-      resultElement = jQuery('<ul>').addClass('pleasurazy-bookmark-search');
-      resultElement.attr('draggable', true);
-      jQuery('body').prepend(resultElement);
+      resultElement = jQuery('<ul>').addClass('pleasurazy-bookmark-search')
+      resultElement.attr('draggable', true)
+      jQuery('body').prepend(resultElement)
     }
 
-    resultElement.empty();
+    resultElement.empty()
 
     bookmarks.forEach(function(bookmark) {
       let aElement = jQuery('<a>')
@@ -25,9 +25,9 @@ function bookmarkSearcherListener(request, sender, callback) {
         .attr('href', bookmark.url)
         .html(bookmark.title)
 
-      let liElement = jQuery('<li>').append(aElement);
+      let liElement = jQuery('<li>').append(aElement)
 
-      resultElement.append(liElement);
-    });
+      resultElement.append(liElement)
+    })
   }
 }

@@ -1,5 +1,3 @@
-'use strict'
-
 import jQuery from 'jquery'
 
 chrome.extension.onRequest.addListener(bookmarkSearcherListener)
@@ -8,7 +6,7 @@ chrome.extension.onRequest.addListener(bookmarkSearcherListener)
 function bookmarkSearcherListener(request, sender, callback) {
   let bookmarks = request.data || []
 
-  if (request.event == 'pleasurazy-bookmark-search:queryBookmarksEnded') {
+  if (request.event === 'pleasurazy-bookmark-search:queryBookmarksEnded') {
     let resultElement = jQuery('.pleasurazy-bookmark-search')
 
     if (!resultElement.length) {

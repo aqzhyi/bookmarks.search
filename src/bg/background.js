@@ -1,5 +1,3 @@
-'use strict'
-
 import extractQuery from './extractQuery.js'
 
 chrome.tabs.onUpdated.addListener(onTabsUpdated)

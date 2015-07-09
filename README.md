@@ -1,33 +1,42 @@
 # Bookmarks Search [![Travis](https://img.shields.io/travis/Pleasurazy/bookmarks.search.svg)](https://travis-ci.org/Pleasurazy/bookmarks.search)
 
-Bookmarks search, the google way.
+> Bookmarks search, the google way.
 
 Youtube.com, tw.yahoo.com, www.google.com, www.bing.com, github.com, etc, works!
 
-# Install
+## Install
 
 Google Chrome: https://chrome.google.com/webstore/detail/bookmarks-search/oakdljgpfopdkhicnfbgbleaklilciai
 
-# Preview
+## Preview
 
 ![](preview.jpg)
 
-# Development
+## Development
 
-```shell
-$ npm run dev
+```sh
+npm install
+bower install
+npm run dev
 ```
 
-# Build
+## Build
 
-```shell
-$ npm run build
+```sh
+npm run build
 ```
 
-# Test
+## ENV
 
-```shell
-$ npm test
+- bower 1.4.1
+- gulp 3.9
+- iojs 2.3.3
+- npm 2.12.1
+
+## Test
+
+```sh
+npm test
 ```
 
 ```

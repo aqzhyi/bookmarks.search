@@ -1,0 +1,6 @@
+{
+  "name": "bookmarks.search.builder",
+  "dependencies": {
+    "angular": "~1.4.2"
+  }
+}

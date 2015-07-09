@@ -23,7 +23,5 @@
   },
   "author": "Pleasurazy <pleasurazy@gmail.com>",
   "license": "MIT",
-  "dependencies": {
-    "angular": "^1.4.2"
-  }
+  "dependencies": {}
 }

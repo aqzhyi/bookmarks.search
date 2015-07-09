@@ -9,7 +9,7 @@ runFn.$inject = [
 
 function runFn($root) {
 
-  chrome.tabs.query({active: true}, function([tab]) {
+  chrome.tabs.query({active: true, currentWindow: true}, function([tab]) {
 
     let query = extractQuery(tab.url)
     query = decodeURIComponent(query)

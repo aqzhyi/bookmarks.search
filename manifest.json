@@ -14,6 +14,13 @@
     "default_title": "可能與正在瀏覽的此頁有所關聯的書籤們",
     "default_popup": "./dist/popup/index.html"
   },
+  "background": {
+    "persistent": true,
+    "scripts": [
+      "./dist/popup/lib/extractQuery.js",
+      "./dist/bg/index.js"
+    ]
+  },
   "permissions": [
     "tabs",
     "activeTab",

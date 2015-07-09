@@ -11,7 +11,9 @@ function autoUpdateBadges() {
     query = decodeURIComponent(query)
 
     chrome.bookmarks.search(`${query}`, (bookmarks) => {
-      chrome.browserAction.setBadgeText({text: `${bookmarks.length}`})
+
+      // TODO: on tab/window Created, on tab url changed
+      // chrome.browserAction.setBadgeText({text: `${bookmarks.length}`})
     })
   })
 }

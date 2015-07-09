@@ -12,7 +12,7 @@ Google Chrome: https://chrome.google.com/webstore/detail/bookmarks-search/oakdlj
 
 ![](preview.jpg)
 
-# Bevelopment
+# Development
 
 ```shell
 $ npm run dev

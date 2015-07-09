@@ -17,6 +17,8 @@ function runFn($root) {
     queryBookmark(query)
     .then((result) => {
 
+      chrome.browserAction.setBadgeText({text: `${result.length}`})
+
       $root.$apply(() => {
         $root.bookmarks = result
       })

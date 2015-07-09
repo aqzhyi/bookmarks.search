@@ -1,11 +1,9 @@
-'use strict'
-
-var expect = require('chai').expect
-var extractQuery = require('../dist/bg/lib/extractQuery.js')
+import {expect} from 'chai'
+import extractQuery from '../dist/popup/lib/extractQuery.js'
 
 describe('query', function() {
 
-  it('query keywords (q|search_query|query|etc) should be work', function() {
+  it('query keywords (q|search_query|query|etc) should be work', () => {
     // match
     expect(extractQuery('https://tw.search.yahoo.com/search?ei=UTF-8&fr=crmas&p=pleasurazy')).to.equal('pleasurazy')
     expect(extractQuery('https://maps.googleapis.com/maps/api/?q=pleasurazy&page=2')).to.equal('pleasurazy')
@@ -19,31 +17,31 @@ describe('query', function() {
     expect(extractQuery('http://www.eztable.com/?utm_source=google_adwords&utm_campaign=brand_name_eztable&utm_medium=cpc&utm_p=a&utm_r=tw&gclid=Cj0KEQjwy7qrBRC4lp7_hM3dgIoBEiQA72pCnjuZqLTjcAad5HyNJL9ohcS0ctz5N7qvLtbxhnoHaqoaAlXv8P8HAQ')).to.be.null
   })
 
-  it('query in the last param using hash sign', function() {
-    var taburl = 'https://www.google.com.tw/webhp?sourceid=chrome-instant&ion=1&espv=2&es_th=1&ie=UTF-8#q=pleasurazy'
+  it('query in the last param using hash sign', () => {
+    let taburl = 'https://www.google.com.tw/webhp?sourceid=chrome-instant&ion=1&espv=2&es_th=1&ie=UTF-8#q=pleasurazy'
 
-    var query = extractQuery(taburl)
+    let query = extractQuery(taburl)
     expect(query).to.equal('pleasurazy')
   })
 
-  it('query between url params using hash sign', function() {
-    var taburl = 'http://example.io/#!/?q=pleasurazy&page=2'
+  it('query between url params using hash sign', () => {
+    let taburl = 'http://example.io/#!/?q=pleasurazy&page=2'
 
-    var query = extractQuery(taburl)
+    let query = extractQuery(taburl)
     expect(query).to.equal('pleasurazy')
   })
 
-  it('query between url params using http queryparams', function() {
-    var taburl = 'https://github.com/search?q=pleasurazy&ref=opensearch'
+  it('query between url params using http queryparams', () => {
+    let taburl = 'https://github.com/search?q=pleasurazy&ref=opensearch'
 
-    var query = extractQuery(taburl)
+    let query = extractQuery(taburl)
     expect(query).to.equal('pleasurazy')
   })
 
-  it('query between url params using restful params', function() {
-    var taburl = 'http://restful.io/search/pleasurazy/page/2'
+  it('query between url params using restful params', () => {
+    let taburl = 'http://restful.io/search/pleasurazy/page/2'
 
-    var query = extractQuery(taburl)
+    let query = extractQuery(taburl)
     expect(query).to.equal('pleasurazy')
   })
 })

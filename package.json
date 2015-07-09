@@ -18,7 +18,7 @@
     "dev": "gulp build && gulp dev",
     "build": "gulp build",
     "postbuild": "npm test",
-    "test": "mocha --check-leaks",
+    "test": "mocha --check-leaks --compilers js:babel/register",
     "zip": "rm -f foo.zip && zip -r foo.zip . --exclude './node_modules/**' './.git/**'"
   },
   "author": "Pleasurazy <pleasurazy@gmail.com>",

@@ -53,11 +53,7 @@ function clearTask(done) {
     './dist/bg/*',
   ]
 
-  let keep = [
-    './dist/bg/node_modules',
-    './dist/bg/package.json',
-    './dist/bg/.gitkeep',
-  ]
+  let keep = []
 
   del(clean, { ignore: keep }, done)
 }

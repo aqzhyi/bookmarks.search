@@ -15,18 +15,16 @@
     "run-sequence": "^1.1.1"
   },
   "scripts": {
-    "predev": "npm i",
-    "dev": "npm run build && gulp dev",
-    "prebuild": "npm i",
-    "build": "npm run install:dist && gulp build",
+    "dev": "gulp build && gulp dev",
+    "build": "gulp build",
     "postbuild": "npm test",
-    "install:dist": "cd dist/bg/ && npm i",
-    "test": "mocha",
+    "test": "mocha --check-leaks",
     "zip": "rm -f foo.zip && zip -r foo.zip . --exclude './node_modules/**' './.git/**'"
   },
   "author": "Pleasurazy <pleasurazy@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "angular": "^1.4.2",
     "jquery": "^2.1.4"
   }
 }

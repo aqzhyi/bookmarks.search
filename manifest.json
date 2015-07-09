@@ -10,24 +10,9 @@
     "128": "icons/icon128.png"
   },
   "default_locale": "en",
-  "content_scripts": [
-    {
-      "js": [
-        "./dist/bg/node_modules/jquery/dist/jquery.min.js",
-        "./dist/bg/index.js"
-      ],
-      "css": [
-        "./dist/bg/index.css"
-      ],
-      "matches": [
-        "http://*/*",
-        "https://*/*"
-      ]
-    }
-  ],
-  "background": {
-    "page": "dist/bg/background.html",
-    "persistent": true
+  "browser_action": {
+    "default_title": "可能與正在瀏覽的此頁有所關聯的書籤們",
+    "default_popup": "./dist/popup/index.html"
   },
   "permissions": [
     "tabs",
